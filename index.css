@@ -2,7 +2,7 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Red Hat Display", sans-serif;
 }
 
 body {
@@ -10,6 +10,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
 }
 
 /* ---------***HEADER---------- */
@@ -55,7 +60,7 @@ nav {
 
 .a-li {
   text-decoration: inherit;
-  color: #f4f4f4;
+  color: whitesmoke;
   transition: all 0.15s ease-out;
 }
 
@@ -67,7 +72,7 @@ nav {
 .register-btn {
   width: 80px;
   height: 40px;
-  background-color: #f4f4f4;
+  background-color: whitesmoke;
   color: #202020;
   display: flex;
   flex-wrap: wrap;
@@ -78,8 +83,86 @@ nav {
 
 .register-btn:hover {
   background-color: #a4d833;
-  color: #f4f4f4;
+  color: whitesmoke;
   transition: all 0.15s ease-out;
 }
 
 /* ---------HEADER***---------- */
+
+/* ---------***SEC-1---------- */
+
+.sec-1-container {
+  width: 83.3%;
+  height: 91vh;
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: aquamarine; */
+}
+
+.sec-1-sec-1 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* background-color: red; */
+}
+
+.sec-1-sec-2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rebeccapurple; */
+}
+
+.home-img {
+  width: 600px;
+  height: 520px;
+}
+
+.sec-1-txt{
+  width: 430px;
+  height: 290px;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+}
+
+.sec-1-h-1 {
+  font-size: 60px;
+  font-weight: 800;
+  color: whitesmoke;
+}
+
+.sec-1-h-2 {
+  font-size: 60px;
+  font-weight: 800;
+  color: #202020;
+  -webkit-text-stroke: 2px #a4d833;
+}
+
+.sec-1-p{
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: whitesmoke;
+}
+
+.sec-1-btn{ 
+  width: 180px;
+  height: 50px;
+  margin-top: 30px;
+  background-color: #a4d833;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn-txt{
+  color: #202020;
+  font-size: 14px;
+  font-weight: 500;
+}
