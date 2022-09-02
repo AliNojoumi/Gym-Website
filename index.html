@@ -20,7 +20,7 @@
           <li class="nav-li"><a href="#" class="a-hover a-li">Program</a></li>
           <li class="nav-li"><a href="#" class="a-hover a-li">Choose Us</a></li>
           <li class="nav-li"><a href="#" class="a-hover a-li">Pricing</a></li>
-          <li class="nav-li register-btn"><a href="#" class="register-btn a-ragister-btn">Register</a></li>
+          <li class="nav-li register-btn" onclick="window.location.href = '#'">Register</li>
         </ul>
       </nav>
     </header>
@@ -30,14 +30,7 @@
           <h1 class="sec-1-h-1">Make your</h1>
           <h1 class="sec-1-h-2">Body Shape</h1>
           <p class="sec-1-p">Here we will help you to shape and build your ideal body and live your life to the fullest.</p>
-          <div class="sec-1-btn">
-            <div class="sec-1-btn-container">
-              <p><a href="#" class="btn-txt">Get Started</a></p>
-              <div>
-                <a href="#" title="btn"><i class="ri-arrow-right-line"></i></a>
-              </div>
-            </div>
-          </div>
+          <button type="button" class="sec-1-btn" onclick="window.location.href='#'">Get Started</button>
         </div>
       </div>
       <div class="sec-1-sec-2">
@@ -190,18 +183,59 @@
           <h6 class="sec-6-h6">Calculate your <span>BMI</span></h6>
           <p class="sec-6-p">The body mess index (BMI) calculator, calculates body mess index from your weight and height.</p>
           <form action="#" name="calculate-form" class="sec-6-form">
-            <input type="text" name="cm" placeholder="CM" class="sec-6-input"/>
-            <input type="text" name="kg" placeholder="KG" class="sec-6-input"/>
+            <input type="text" name="cm" placeholder="CM" class="sec-6-input" />
+            <input type="text" name="kg" placeholder="KG" class="sec-6-input" />
+            <input type="submit" value="calculate" name="calculate-btn" class="submit-btn" />
           </form>
-          <button>Calculate</button>
+          <p class="result"></p>
         </div>
       </div>
       <div class="sec-6-sec-2">
         <img src="Images/calculate-img.png" alt="calculate-img" class="calculate-img" />
       </div>
     </section>
-    <section class="sec-7-container">
-      <div class=""></div>
+    <section class="footer-sec">
+      <div class="footer-sec-box">
+        <div class="footer-sec-1">
+          <h6 class="footer-h-6">GYMGO</h6>
+          <p class="footer-p">Subscribe for updates below :</p>
+          <form action="#" name="footer-form" class="footer-form">
+            <input type="email" name="email-input" placeholder="Email" class="email-input" />
+            <input type="submit" name="submit-input" value="subscribe" class="submit-input" />
+          </form>
+          <p class="footer-p-2">@copyright Ali Nojoumi. All rights reserved.</p>
+        </div>
+        <div class="footer-sec-2">
+          <div class="footer-sec-2-txt">
+            <div>
+              <h6 class="footer-h-6">Services</h6>
+              <ul class="footer-ul">
+                <li class="footer-li"><a href="#">Flex Muscle</a></li>
+                <li class="footer-li"><a href="#">Cardio Exercise</a></li>
+                <li class="footer-li"><a href="#">Basic Yoga</a></li>
+                <li class="footer-li"><a href="#">Weight Lifting</a></li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="footer-h-6">Pricing</h6>
+              <ul class="footer-ul">
+                <li class="footer-li"><a href="#">Basic</a></li>
+                <li class="footer-li"><a href="#">Premium</a></li>
+                <li class="footer-li"><a href="#">Diamond</a></li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="footer-h-6">Company</h6>
+              <ul class="footer-ul">
+                <li class="footer-li"><a href="#">About Us</a></li>
+                <li class="footer-li"><a href="#">Careers</a></li>
+                <li class="footer-li"><a href="#">Customers</a></li>
+                <li class="footer-li"><a href="#">Partners</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </body>
 </html>
