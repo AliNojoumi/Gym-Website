@@ -7,6 +7,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;800;900&display=swap");
     </style>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="index.css" />
     <title>GYMGO</title>
@@ -22,7 +23,17 @@
           <li class="nav-li"><a href="#" class="a-hover a-li">Pricing</a></li>
           <li class="nav-li register-btn" onclick="window.location.href = '#'">Register</li>
         </ul>
+        <div class="burger-menu-icon" id="burger-menu-icon" onclick="burgerMenu()"><i class="bx bx-menu"></i></div>
       </nav>
+      <div class="burger-menu-sec" id="burger-menu-sec">
+        <ul class="burger-ul">
+          <li class="nav-li"><a href="#" class="a-hover a-li">Home</a></li>
+          <li class="nav-li"><a href="#" class="a-hover a-li">Program</a></li>
+          <li class="nav-li"><a href="#" class="a-hover a-li">Choose Us</a></li>
+          <li class="nav-li"><a href="#" class="a-hover a-li">Pricing</a></li>
+          <li class="nav-li"><a href="#" class="a-hover a-li">Register</a></li>
+        </ul>
+      </div>
     </header>
     <section class="sec-1-container">
       <div class="sec-1-sec-1">
@@ -35,6 +46,8 @@
       </div>
       <div class="sec-1-sec-2">
         <img src="Images/home-img.png" class="home-img" alt="home-img" />
+        <div class="triangle-1"></div>
+        <div class="triangle-2"></div>
       </div>
     </section>
     <section class="sec-2-container">
@@ -127,8 +140,8 @@
       <div class="sec-5-sec-2">
         <div class="card-sec-5">
           <div class="card-box">
-            <div>
-              <img src="Images/pricing1.png" alt="pricing-1" class="practicing-img" />
+            <div class="pricing-img-box">
+              <img src="Images/pricing1.png" alt="pricing-1" class="pricing-img" />
             </div>
             <div class="sec-5-txt">
               <h6 class="pricing-h6">Basic Pack</h6>
@@ -145,8 +158,8 @@
         </div>
         <div class="card-sec-5">
           <div class="card-box">
-            <div>
-              <img src="Images/pricing2.png" alt="pricing-2" class="practicing-img" />
+            <div class="pricing-img-box">
+              <img src="Images/pricing2.png" alt="pricing-2" class="pricing-img" />
             </div>
             <h6 class="pricing-h6">Premium pack</h6>
             <h6 class="pricing-h6">240$</h6>
@@ -161,8 +174,8 @@
         </div>
         <div class="card-sec-5">
           <div class="card-box">
-            <div>
-              <img src="Images/pricing3.png" alt="pricing-3" class="practicing-img" />
+            <div class="pricing-img-box">
+              <img src="Images/pricing3.png" alt="pricing-3" class="pricing-img" />
             </div>
             <h6 class="pricing-h6">Diamond Pack</h6>
             <h6 class="pricing-h6">420$</h6>
@@ -179,15 +192,15 @@
     </section>
     <section class="sec-6-container">
       <div class="sec-6-sec-1">
-        <div>
+        <div class="sec-6-sec-1-box">
           <h6 class="sec-6-h6">Calculate your <span>BMI</span></h6>
           <p class="sec-6-p">The body mess index (BMI) calculator, calculates body mess index from your weight and height.</p>
-          <form action="#" name="calculate-form" class="sec-6-form">
-            <input type="text" name="cm" placeholder="CM" class="sec-6-input" />
-            <input type="text" name="kg" placeholder="KG" class="sec-6-input" />
-            <input type="submit" value="calculate" name="calculate-btn" class="submit-btn" />
+          <form action="#" name="calculate-form" id="calculate-form" class="sec-6-form" onsubmit="return false">
+            <input type="text" name="cm" placeholder="CM" class="sec-6-input" id="cm" />
+            <input type="text" name="kg" placeholder="KG" class="sec-6-input" id="kg" />
+            <input type="submit" value="calculate" name="calculate-btn" class="submit-btn" onclick="calculateBMI()" />
           </form>
-          <p class="result"></p>
+          <p class="result" id="result"></p>
         </div>
       </div>
       <div class="sec-6-sec-2">
@@ -200,10 +213,9 @@
           <h6 class="footer-h-6">GYMGO</h6>
           <p class="footer-p">Subscribe for updates below :</p>
           <form action="#" name="footer-form" class="footer-form">
-            <input type="email" name="email-input" placeholder="Email" class="email-input" />
+            <input type="email" name="email-input" placeholder="example@example.com" class="email-input" />
             <input type="submit" name="submit-input" value="subscribe" class="submit-input" />
           </form>
-          <p class="footer-p-2">@copyright Ali Nojoumi. All rights reserved.</p>
         </div>
         <div class="footer-sec-2">
           <div class="footer-sec-2-txt">
@@ -237,5 +249,6 @@
         </div>
       </div>
     </section>
+    <script type="text/javascript" src="index.js"></script>
   </body>
 </html>

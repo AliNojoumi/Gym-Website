@@ -5,6 +5,10 @@
   font-family: "Red Hat Display", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #202020;
   display: flex;
@@ -17,6 +21,10 @@ a {
   color: inherit;
 }
 
+.green-result {
+  color: #a4d833;
+}
+
 /* ---------***HEADER---------- */
 
 header {
@@ -26,6 +34,11 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  top: 0;
+  position: sticky;
+  z-index: +999;
+  background: RGBA(32, 32, 32, 0.15);
+  backdrop-filter: blur(3px);
 }
 
 nav {
@@ -93,6 +106,49 @@ nav {
 
 /* ---------HEADER***---------- */
 
+/* ----------***BURGER-MENU---------- */
+
+.burger-menu-icon {
+  font-size: 32px;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+  display: none;
+}
+
+.burger-menu-icon:hover {
+  color: #a4d833;
+  transition: all 0.15s ease-out;
+}
+
+.burger-menu-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: +999;
+  background: RGBA(32, 32, 32, 0.15);
+  backdrop-filter: blur(3px);
+  display: none;
+}
+
+.burger-menu-display {
+  display: flex;
+}
+
+.burger-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ----------***BURGER-MENU---------- */
+
 /* ---------***SEC-1---------- */
 
 .sec-1-container {
@@ -122,6 +178,9 @@ nav {
 .home-img {
   width: 600px;
   height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
 }
 
 .sec-1-txt {
@@ -153,7 +212,7 @@ nav {
 
 .sec-1-btn {
   margin-top: 30px;
-  width: 80%;
+  width: 70%;
   height: 45px;
   background-color: #a4d833;
   border-style: none;
@@ -161,12 +220,34 @@ nav {
   transition: all 0.15s ease-out;
 }
 
-.sec-1-btn:hover{
+.sec-1-btn:hover {
   background-color: #202020;
   color: whitesmoke;
   border: 2px solid #a4d833;
   transition: all 0.15s ease-out;
 }
+
+/* .triangle-1 {
+  width: 20%;
+  height: 490px;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 80px;
+  background-color: #a4d833;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.triangle-2 {
+  width: 35%;
+  height: 490px;
+  position: absolute;
+  z-index: -2;
+  right: 0;
+  bottom: 80px;
+  background-color: #84aa31;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+} */
 
 /* ---------SEC-1***---------- */
 
@@ -174,8 +255,8 @@ nav {
 
 .sec-2-container {
   width: 83.3%;
-  height: 60px;
-  margin-top: 15px;
+  height: auto;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,13 +267,14 @@ nav {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .sec-2-logo {
   width: 150px;
-  height: 45px;
+  height: auto;
 }
 
 /* ---------SEC-2***---------- */
@@ -201,8 +283,8 @@ nav {
 
 .sec-3-container {
   width: 83.3%;
-  height: 100%;
-  margin-top: 90px;
+  height: auto;
+  margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -211,7 +293,7 @@ nav {
 
 .sec-3-sec-1 {
   width: 100%;
-  height: 15%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -220,11 +302,12 @@ nav {
 
 .sec-3-sec-2 {
   width: 100%;
-  height: 80%;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  justify-content: space-between;
+  gap: 40px;
+  justify-content: center;
+  padding-top: 50px;
 }
 
 .sec-3-header {
@@ -241,9 +324,8 @@ nav {
 }
 
 .card {
-  width: 240px;
+  width: 260px;
   height: 350px;
-  margin-top: 50px;
   background-color: #2a2831;
   display: flex;
   justify-content: center;
@@ -257,8 +339,8 @@ nav {
 }
 
 .practicing-image {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: auto;
 }
 
 .card-h6 {
@@ -282,10 +364,10 @@ nav {
 
 .sec-4-container {
   width: 83.3%;
-  height: 91vh;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: 70px;
 }
 
 .sec-4-sec-1 {
@@ -305,7 +387,7 @@ nav {
 }
 
 .choose-img {
-  width: 400px;
+  width: 410px;
   height: auto;
 }
 
@@ -321,7 +403,7 @@ nav {
 .sec-4-p {
   font-size: 14px;
   font-weight: 400;
-  margin-top: 30px;
+  margin-top: 20px;
   color: whitesmoke;
 }
 
@@ -330,7 +412,7 @@ nav {
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
   gap: 20px;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .sec-4-opt-h6 {
@@ -350,13 +432,13 @@ nav {
 
 .sec-5-container {
   width: 66.4%;
-  height: 515px;
-  margin-top: 30px;
+  height: auto;
+  margin-top: 70px;
 }
 
 .sec-5-sec-1 {
   width: 100%;
-  height: 65px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -365,17 +447,17 @@ nav {
 
 .sec-5-sec-2 {
   width: 100%;
-  height: 455px;
+  height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 50px;
+  padding-top: 50px;
 }
 
 .card-sec-5 {
   width: 270px;
-  height: 400px;
-  margin-top: 50px;
+  height: auto;
   background-color: #a4d833;
   display: flex;
   justify-content: center;
@@ -386,9 +468,14 @@ nav {
   margin-top: 25px;
 }
 
-.practicing-img {
-  width: 100px;
-  height: 100px;
+.pricing-img-box {
+  display: flex;
+  align-items: center;
+}
+
+.pricing-img {
+  width: 80px;
+  height: auto;
   margin-bottom: 30px;
 }
 
@@ -418,7 +505,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 70px;
 }
 
 .sec-6-sec-1 {
@@ -451,12 +538,12 @@ span {
   font-size: 14px;
   font-weight: 400;
   color: whitesmoke;
-  margin-top: 30px;
+  margin-top: 25px;
   margin-bottom: 35px;
 }
 
 .sec-6-form {
-  width: 100%;
+  width: 50%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
@@ -464,20 +551,21 @@ span {
 }
 
 .sec-6-input {
+  width: 100%;
   background: #2a2831;
-  height: 45px;
+  height: 40px;
   border-style: none;
+  border: 2px solid #a4d833;
+  padding-left: 10px;
 }
 
-.sec-6-input:-webkit-placeholder {
-  float: right;
-  margin-left: 10px;
+.sec-6-input::placeholder {
   color: #a4d833;
 }
 
 .submit-btn {
-  width: 325px;
-  height: 45px;
+  width: 100%;
+  height: 40px;
   background-color: #a4d833;
   color: #202020;
   border: none;
@@ -494,8 +582,15 @@ span {
   transition: all 0.15s ease-out;
 }
 
+.result {
+  margin-top: 16px;
+  color: #777777;
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .calculate-img {
-  width: 310px;
+  width: 280px;
   height: auto;
 }
 
@@ -514,9 +609,10 @@ span {
 }
 
 .footer-sec-box {
-  width: 83.3%;
-  height: 100%;
+  width: 75%;
+  height: auto;
   display: flex;
+  padding-bottom: 15px;
 }
 
 .footer-sec-1 {
@@ -546,21 +642,29 @@ span {
 }
 
 .footer-form {
+  width: 60%;
+  height: auto;
   margin-top: 10px;
   display: flex;
   gap: 10px;
+  margin-top: 10px;
 }
 
 .email-input {
-  width: 200px;
+  width: 75%;
   height: 35px;
   background: #2a2831;
   border-style: none;
   border: 2px solid #a4d833;
+  padding-left: 10px;
+}
+
+.email-input::placeholder {
+  color: #a4d833;
 }
 
 .submit-input {
-  width: 90px;
+  width: 25%;
   height: 35px;
   background-color: #a4d833;
   color: #202020;
@@ -590,6 +694,7 @@ span {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 15px;
 }
 
 .footer-h-6 {
@@ -620,7 +725,7 @@ span {
 
 /* ----------***CSS-MEDIA-QUERRIES---------- */
 
-@media screen and (max-width: 1199.9px) {
+@media screen and (max-width: 1149.9px) {
   .sec-1-container {
     display: flex;
     flex-direction: column-reverse;
@@ -631,11 +736,13 @@ span {
     height: 50%;
     display: flex;
     justify-content: center;
+    padding-top: 25px;
   }
 
   .sec-1-sec-2 {
     width: 100%;
     height: 50%;
+    padding-top: 20px;
   }
 
   .sec-1-txt {
@@ -644,9 +751,120 @@ span {
     align-items: center;
   }
 
+  .sec-1-h-1,
+  .sec-1-h-2 {
+    font-size: 34px;
+  }
+
+  .sec-1-p {
+    width: 80%;
+    text-align: center;
+  }
+
   .home-img {
-    width: 320px;
-    height: 300px;
+    width: 350px;
+    height: auto;
+  }
+
+  .card-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sec-4-sec-1 {
+    width: 100%;
+    height: auto;
+  }
+
+  .sec-4-sec-2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .sec-4-sec-2-box {
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .sec-4-p {
+    width: 100%;
+  }
+
+  .choose-img {
+    width: 230px;
+    height: auto;
+  }
+
+  .sec-6-container {
+    height: auto;
+    flex-direction: column-reverse;
+  }
+
+  .sec-6-sec-1 {
+    width: 100%;
+    height: auto;
+    padding: 20px 0px;
+  }
+
+  .sec-6-sec-2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .sec-6-sec-1-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .calculate-img {
+    width: 160px;
+    height: auto;
+  }
+
+  .footer-sec-box {
+    flex-direction: column;
+  }
+
+  .footer-sec-1,
+  .footer-sec-2 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-sec-2-txt {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 899.9px) {
+  .nav-ul {
+    display: none;
+  }
+
+  .burger-menu-icon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 699.9px) {
+  .footer-form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .email-input,
+  .submit-input {
+    width: 100%;
   }
 }
 
